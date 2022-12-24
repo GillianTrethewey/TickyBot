@@ -1,0 +1,510 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*
+************** ELEMENTS **************
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+figcaption {
+  font-family: "Signika", sans-serif;
+  font-size: 1.25rem;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem auto;
+  padding: 1rem;
+  font-size: 1.75rem;
+  font-weight: 300;
+  max-width: 300px;
+  max-height: 70px;
+  font-family: "Signika", sans-serif;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 0.5;
+  transition: transform 1s;
+  cursor: pointer;
+}
+
+button img {
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+  transition: transform 1s;
+}
+
+button a {
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+button.button-light a {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.button-light {
+  background: white;
+  margin: 3rem auto;
+  animation-name: animation;
+  animation-duration: 3s;
+}
+
+button.button-dark a {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.button-dark {
+  background: #40596b;
+  margin: 3rem auto;
+}
+.button-dark:hover {
+  background: rgb(118, 118, 118);
+  border: rgb(118, 118, 118);
+}
+
+button:hover.button-light,
+button:hover.button-dark {
+  transform: scale(0.95);
+}
+
+button:hover img.slack-img {
+  transform: scale(1.5) rotate(20deg);
+}
+/*
+************** HEADER **************
+*/
+
+header {
+  background-color: #40596b;
+  padding: 0.07rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  width: 100%;
+  z-index: 2;
+}
+
+nav .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+nav .container ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 1.2rem;
+}
+nav .container ul li {
+  display: inline-block;
+  margin-right: 0.6rem;
+  letter-spacing: -0.02rem;
+}
+
+nav .container ul li a {
+  color: #ffd05a;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+/*
+************** HERO **************
+*/
+
+#hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(80vh);
+  background-color: #55c0ec;
+  padding-top: 0.7rem;
+  flex-wrap: wrap;
+}
+
+section#hero {
+  display: flex;
+}
+
+#hero .description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-around;
+  min-width: 320px;
+  width: 50%;
+  animation-name: animation;
+  animation-duration: 2s;
+}
+
+#hero .image-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 320px;
+  width: 50%;
+  animation-name: animation;
+  animation-duration: 4s;
+}
+
+figure.tickybot-container {
+  margin: 15px;
+}
+#hero h1 {
+  font-family: "Signika";
+  font-weight: 300;
+  font-size: 5rem;
+  text-align: center;
+  line-height: 1.5;
+  padding: 1rem;
+  letter-spacing: -0.05em;
+  color: rgba(0, 0, 0, 0.65);
+  animation-name: animationMainTitle;
+  animation-duration: 1s;
+}
+
+#hero span {
+  font-weight: 600;
+}
+
+#hero p {
+  color: white;
+  font-size: 1.65rem;
+  text-align: center;
+  line-height: 1.5;
+  padding: 0.8rem 3rem;
+}
+
+#hero figure {
+  width: 400px;
+}
+#hero .image-container img {
+  width: 100%;
+  height: auto;
+}
+
+/*
+************** ABOUT **************
+*/
+
+#about {
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+  color: rgba(0, 0, 0, 0.75);
+  margin-top: 30px;
+  padding: 2rem;
+}
+
+.about-title {
+  margin-bottom: 5px;
+  margin-top: 10px;
+  animation-name: animation;
+  animation-duration: 5s;
+}
+.about-container {
+  display: flex;
+}
+.about-left {
+  padding-left: 25px;
+  padding-bottom: 0;
+}
+
+.about-right {
+  padding-right: 25px;
+  padding-bottom: 0;
+}
+
+.about-bottom {
+  padding-right: 25px;
+  padding-left: 25px;
+  padding-top: 0;
+}
+
+.about-title h2 {
+  font-family: "Signika";
+  font-weight: 300;
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: -0.05em;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+#about h2 span {
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 60px;
+}
+
+#about .about-left span,
+#about .about-right span {
+  font-weight: 600;
+}
+#about .about-left,
+#about .about-right {
+  padding: 1rem;
+}
+#about p {
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 1.25rem;
+  text-align: center;
+  line-height: 1.5;
+  padding: 1rem;
+  font-weight: 300;
+  text-align: left;
+}
+
+#about span.italic {
+  font-style: italic;
+  font-weight: 400;
+}
+/*
+************** FEATURES **************
+*/
+
+#features {
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh);
+  background-color: #90ddaa;
+  min-height: calc(50vh);
+  padding: 1.5rem;
+}
+
+#features h3 {
+  font-family: "Signika";
+  font-weight: 300;
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: -0.05em;
+  color: rgba(0, 0, 0, 0.65);
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+.info-group {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.2rem;
+  margin-bottom: 3rem;
+}
+
+figure.info-1,
+figure.info-2,
+figure.info-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #40596b;
+  width: 30%;
+  margin: 1rem;
+}
+
+figure.info-1 img,
+figure.info-2 img,
+figure.info-3 img {
+  width: 60%;
+  margin: 4rem auto;
+}
+
+figure figcaption {
+  background: white;
+  font-size: 1.2rem;
+  padding: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+figure figcaption span.important {
+  color: #dc143c;
+}
+/*
+************** CTA **************
+*/
+
+#cta {
+  min-height: calc(50vh);
+  margin: 0 10rem;
+}
+
+.cta-title h3 {
+  font-family: "Signika";
+  font-weight: 300;
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: -0.05em;
+  color: rgba(0, 0, 0, 0.65);
+  margin-top: 50px;
+}
+
+.cta-title h3 span {
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 60px;
+}
+
+#cta p {
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 1.25rem;
+  text-align: center;
+  line-height: 1.5;
+  padding: 1rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 80px;
+  margin-top: 40px;
+}
+
+#cta p.cta-p {
+  margin-top: 70px;
+}
+
+#cta span {
+  font-weight: 600;
+}
+
+/*
+************** FOOTER **************
+*/
+
+footer {
+  background-color: #40596b;
+  height: calc(10vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer.footer-container {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: space-around;
+}
+footer p {
+  color: white;
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 20px;
+}
+
+footer a {
+  color: white;
+}
+
+footer button {
+  color: pink;
+}
+
+button#scroll-to-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #ffd05a;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+  position: fixed;
+  right: 2rem;
+  bottom: 1.75rem;
+  padding: 0;
+  padding-left: 1rem;
+  margin: 0 auto;
+}
+
+button#scroll-to-top img {
+  width: 25px;
+  background-size: contain;
+}
+/*
+************** ANIMATIONS **************
+*/
+
+@keyframes animationMainTitle {
+  0% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+  20% {
+    opacity: 0.2;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes animation {
+  0% {
+    opacity: 1;
+    transform: translateY(-25px);
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*
+************** MEDIA QUERIES **************
+*/
+
+@media (max-width: 890px) {
+  .info-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  figure.info-1,
+  figure.info-2,
+  figure.info-3 {
+    min-width: 70%;
+    margin-bottom: 10%;
+  }
+}
+@media (max-width: 750px) {
+  #about {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .about-container {
+    flex-direction: column;
+  }
+}

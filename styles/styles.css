@@ -518,7 +518,7 @@ button#scroll-to-top img {
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 800px) {
   .cta {
     margin: 50px 10px 30px 10px;
   }

@@ -348,9 +348,14 @@ figure figcaption span.important {
 ************** CTA **************
 */
 
-#cta {
+.cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   min-height: calc(50vh);
-  margin: 0 10rem;
+  min-width: 250px;
+  margin: 4rem 8rem 1rem 8rem;
 }
 
 .cta-title h3 {
@@ -361,7 +366,8 @@ figure figcaption span.important {
   line-height: 1.5;
   letter-spacing: -0.05em;
   color: rgba(0, 0, 0, 0.65);
-  margin-top: 50px;
+  margin-right: 4rem;
+  margin-left: 4rem;
 }
 
 .cta-title h3 span {
@@ -378,12 +384,14 @@ figure figcaption span.important {
   padding: 1rem;
   font-weight: 300;
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   margin-top: 40px;
+  margin-right: 3rem;
+  margin-left: 3rem;
 }
 
 #cta p.cta-p {
-  margin-top: 70px;
+  margin-top: 50px;
 }
 
 #cta span {
@@ -397,6 +405,7 @@ figure figcaption span.important {
 footer {
   background-color: #40596b;
   height: calc(10vh);
+  min-height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -506,5 +515,16 @@ button#scroll-to-top img {
   }
   .about-container {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 650px) {
+  .cta {
+    margin: 50px 10px 30px 10px;
+  }
+
+  #cta p {
+    margin-left: 5px;
+    margin-right: 5px;
   }
 }
